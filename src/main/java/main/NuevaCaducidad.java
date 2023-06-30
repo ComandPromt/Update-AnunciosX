@@ -209,6 +209,7 @@ public class NuevaCaducidad extends javax.swing.JFrame implements ActionListener
 
 		btnNewButton.addActionListener(new ActionListener() {
 
+			@Override
 			public void actionPerformed(ActionEvent e) {
 
 				guardar();
@@ -281,6 +282,7 @@ public class NuevaCaducidad extends javax.swing.JFrame implements ActionListener
 
 		btnNewButton_1.addActionListener(new ActionListener() {
 
+			@Override
 			public void actionPerformed(ActionEvent e) {
 
 				dispose();
@@ -295,6 +297,7 @@ public class NuevaCaducidad extends javax.swing.JFrame implements ActionListener
 
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 
+			@Override
 			public void actionPerformed(ActionEvent e) {
 
 				setState(JFrame.ICONIFIED);
@@ -306,11 +309,12 @@ public class NuevaCaducidad extends javax.swing.JFrame implements ActionListener
 		btnNewButton_1_1.setIcon(new ImageIcon(NuevoRegistro.class.getResource("/imagenes/min.png")));
 
 		ButtonRoundedWithImage jButton5 = new ButtonRoundedWithImage();
-
-		jButton5.setIcon(new ImageIcon(Config.class.getResource("/imagenes/tiempo.png")).toString(), 55, 55, 15);
+		jButton5.setBackground(Color.WHITE);
+		jButton5.setText("Seleccionar fecha");
 
 		jButton5.addActionListener(new ActionListener() {
 
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				dateChooser.showPopup();
 			}
@@ -330,73 +334,67 @@ public class NuevaCaducidad extends javax.swing.JFrame implements ActionListener
 		}
 
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-		layout.setHorizontalGroup(layout.createParallelGroup(Alignment.TRAILING).addGroup(layout.createSequentialGroup()
-				.addGap(85)
-				.addGroup(layout.createParallelGroup(Alignment.TRAILING).addGroup(layout
-						.createParallelGroup(Alignment.TRAILING, false)
-						.addGroup(layout.createSequentialGroup()
+		layout.setHorizontalGroup(layout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.TRAILING)
+						.addGroup(layout.createSequentialGroup().addContainerGap()
+								.addComponent(btnNewButton_1_1, GroupLayout.PREFERRED_SIZE, 32,
+										GroupLayout.PREFERRED_SIZE)
+								.addGap(18).addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 33,
+										GroupLayout.PREFERRED_SIZE))
+						.addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup()
+								.addGap(85)
+								.addGroup(layout.createParallelGroup(Alignment.TRAILING)
+										.addGroup(layout.createParallelGroup(Alignment.TRAILING, false)
+												.addGroup(layout.createSequentialGroup()
+														.addGroup(layout.createParallelGroup(Alignment.LEADING)
+																.addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 125,
+																		GroupLayout.PREFERRED_SIZE)
+																.addComponent(lblNewLabel_3_2))
+														.addGap(64))
+												.addComponent(lblNewLabel_3_1, GroupLayout.DEFAULT_SIZE,
+														GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+										.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 197,
+												GroupLayout.PREFERRED_SIZE))
+								.addPreferredGap(ComponentPlacement.RELATED)
 								.addGroup(layout.createParallelGroup(Alignment.LEADING)
-										.addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 125,
-												GroupLayout.PREFERRED_SIZE)
-										.addComponent(lblNewLabel_3_2))
-								.addGap(64))
-						.addComponent(lblNewLabel_3_1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE,
-								Short.MAX_VALUE))
-						.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 197, GroupLayout.PREFERRED_SIZE))
-				.addPreferredGap(ComponentPlacement.RELATED)
-				.addGroup(layout.createParallelGroup(Alignment.LEADING)
-						.addComponent(webcamer, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-						.addComponent(paginas, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-						.addComponent(fecha, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-						.addComponent(caducidad, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
-				.addGap(30)
-				.addGroup(layout.createParallelGroup(Alignment.TRAILING).addGroup(layout.createSequentialGroup()
-						.addComponent(btnNewButton_1_1, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
-						.addGap(18)
-						.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
-						.addGap(101)).addGroup(
-								layout.createSequentialGroup()
-										.addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 50,
-												GroupLayout.PREFERRED_SIZE)
-										.addGap(181))))
-				.addGroup(layout.createSequentialGroup().addContainerGap(624, Short.MAX_VALUE)
-						.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 159, GroupLayout.PREFERRED_SIZE)
+										.addComponent(webcamer, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+										.addComponent(paginas, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+										.addComponent(fecha, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+										.addComponent(caducidad, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+								.addGap(30)
+								.addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 167, GroupLayout.PREFERRED_SIZE))
+								.addGroup(layout.createSequentialGroup().addContainerGap(624, Short.MAX_VALUE)
+										.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 159,
+												GroupLayout.PREFERRED_SIZE))))
 						.addGap(64)));
 		layout.setVerticalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup()
-				.addGap(28)
-				.addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup()
+				.addGap(27)
+				.addGroup(layout.createParallelGroup(Alignment.LEADING)
 						.addComponent(btnNewButton_1_1, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
-						.addGap(18)
+						.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE))
+				.addGap(19)
+				.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 67, GroupLayout.PREFERRED_SIZE)
+						.addComponent(webcamer, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE))
+				.addGap(38)
+				.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblNewLabel_3_2, GroupLayout.PREFERRED_SIZE, 63, GroupLayout.PREFERRED_SIZE)
+						.addComponent(paginas, GroupLayout.PREFERRED_SIZE, 52, GroupLayout.PREFERRED_SIZE))
+				.addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup()
+						.addPreferredGap(ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
 						.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-								.addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 67, GroupLayout.PREFERRED_SIZE)
-								.addComponent(webcamer, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE))
-						.addGap(38)
-						.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblNewLabel_3_2, GroupLayout.PREFERRED_SIZE, 63,
-										GroupLayout.PREFERRED_SIZE)
-								.addComponent(paginas, GroupLayout.PREFERRED_SIZE, 52, GroupLayout.PREFERRED_SIZE))
-						.addGroup(layout.createParallelGroup(Alignment.LEADING)
-								.addGroup(layout.createSequentialGroup()
-										.addPreferredGap(ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-										.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-												.addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 53,
-														GroupLayout.PREFERRED_SIZE)
-												.addComponent(fecha, GroupLayout.PREFERRED_SIZE,
-														GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-										.addGap(53))
-								.addGroup(layout.createSequentialGroup().addGap(48).addComponent(lblNewLabel_1)
-										.addPreferredGap(ComponentPlacement.RELATED)))
-						.addGroup(layout.createParallelGroup(Alignment.TRAILING)
-								.addComponent(caducidad, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
-										GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblNewLabel_3_1, GroupLayout.PREFERRED_SIZE, 63,
+								.addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
+								.addComponent(fecha, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
 										GroupLayout.PREFERRED_SIZE))
-						.addGap(10))
-						.addGroup(layout.createSequentialGroup()
-								.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 35,
-										GroupLayout.PREFERRED_SIZE)
+						.addGap(53))
+						.addGroup(layout.createSequentialGroup().addGap(48).addComponent(lblNewLabel_1)
 								.addPreferredGap(ComponentPlacement.RELATED)))
-				.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE).addGap(55)));
+				.addGroup(layout.createParallelGroup(Alignment.TRAILING)
+						.addComponent(caducidad, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblNewLabel_3_1, GroupLayout.PREFERRED_SIZE, 63, GroupLayout.PREFERRED_SIZE))
+				.addGap(10).addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE)
+				.addGap(55)));
 
 		getContentPane().setLayout(layout);
 
